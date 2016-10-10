@@ -1,0 +1,14 @@
+import javax.swing.*;
+public class pingpong {
+ 
+	public static void main(String[] args) {
+		JFrame frame = new JFrame();
+		frame.setSize(800, 700); //x,y
+		frame.setLocation(300,100); // x,y
+		frame.setDefaultCloseOperation(3);
+		frame.setResizable(false);
+		frame.setVisible(true);
+		
+	}
+	
+}
