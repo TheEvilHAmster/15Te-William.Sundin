@@ -28,7 +28,7 @@ public class Ball {
 		y += moveY;
 		}
 	
-	
+	// Look a use less line
 	
 	public void paint(Graphics2D g){
 		
