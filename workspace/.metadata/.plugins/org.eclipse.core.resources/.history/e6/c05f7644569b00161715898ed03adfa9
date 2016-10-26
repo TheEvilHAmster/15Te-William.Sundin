@@ -1,0 +1,12 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandomNr {
+
+	public static void main(String[] args) {
+		Random rand = new Random();
+		int C = rand.nextInt(100);
+		System.out.print(C);
+	}
+
+}
