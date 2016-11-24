@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;i&apos; in &apos;Start.showGrid(...)&apos; to &apos;y&apos;&#x0D;&#x0A;- Original project: &apos;Krypto Kryss&apos;&#x0D;&#x0A;- Original element: &apos;Start.showGrid(int[][], char[]).i&apos;&#x0D;&#x0A;- Renamed element: &apos;i&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;i&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Start.java[Start~showGrid~\[\[I~\[C@i!817!825!821!821!I!0!false" name="y" references="true" stamp="1479724849018" version="1.0"/>
+</session>

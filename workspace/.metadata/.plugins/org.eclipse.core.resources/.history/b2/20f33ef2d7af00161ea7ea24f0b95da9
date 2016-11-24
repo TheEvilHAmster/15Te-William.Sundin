@@ -1,0 +1,56 @@
+/* 
+1.Mata in krupto
+
+2.Skriv ut krypto
+Håll reda på vilka siffror som har ett tecken i nyckeln
+Det ska vara någon form av layot, ramar eller grafik eller liknande liknande
+
+3.Mata in  nyckel
+Hur ska jag hålla koll på vad jag matar in, så att rätt bockastv hamnar på rätt plats.
+"14 = T" pasa efter = och allt före är ett tal och ett tecken
+"T = 14! samma fast tvärtom. 
+*/
+
+public class Start {
+
+	static void println(String stringtoprint){
+		System.out.println(stringtoprint);
+	}
+
+	static void showGrid(int[][] krypto, char[] key){
+		int width = krypto[0].length;
+		
+		StringBuilder sb = new StringBuilder("+");
+		for(int i = 0; i < width; i++) {
+			sb.append("--+");
+		}
+		String breakingLine = sb.toString();
+		
+		System.out.println(breakingLine);
+		for(int[] row : krypto) {
+			System.out.print("|");
+			for(int x : row) {
+				char character = key[x];
+				if(character == 0) {
+					character = (char) x;
+				}
+				
+				String output = String.format("%2d", x);
+				System.out.print(output);
+				System.out.print("|");
+			}
+			System.out.println();
+			System.out.println(breakingLine);
+		}
+	}
+		
+
+	
+	public static void main(String[] args) {
+		int sizeX=5, sizeY=5; //Kryptots storlek
+		int[][] krypto = new int[sizeY][sizeX];
+		char key [] = new char [30];
+		
+		showGrid(krypto, key);
+	}
+}

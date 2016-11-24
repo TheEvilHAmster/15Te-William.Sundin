@@ -1,0 +1,41 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandomNr {
+
+	public static void main(String[] args) {
+		
+		int P;
+		System.out.println("Guess the number!");
+		
+		
+		while (C != P ) {
+		Scanner in = new Scanner(System.in);
+		Random rand = new Random();
+		int C = rand.nextInt(100);
+		
+		Scanner in = new Scanner(System.in);
+		P = in.nextInt();
+		
+		if (P + 30 <= C || P - 30 >= C) {
+			System.out.println("It's ice cold!!");
+		}
+		else if (P + 20 <= C || P - 20 >= C) {
+			System.out.println("It's ice cold!!");
+		}
+		
+		else if (P + 10 <= C || P - 10 >= C) {
+			System.out.println("It's a little worm");
+		}
+		else if (P + 10 > C || P - 10 < C) {
+			System.out.println("It's hot!");
+		}
+		
+		else if (P + 5 > C || P - 5 > C) {
+			System.out.println("You are Burning its hot!");
+		}
+
+		}
+	}
+
+}

@@ -4,12 +4,13 @@ import java.util.Scanner;
 public class RandomNr {
 
 	public static void main(String[] args) {
-		
+		int U;
 		int P;
+		int C = U;
+		
 		System.out.println("Guess the number!");
 		
-		
-		while (C != P ) {
+		while (U != P ) {
 		Scanner in = new Scanner(System.in);
 		Random rand = new Random();
 		int C = rand.nextInt(100);
