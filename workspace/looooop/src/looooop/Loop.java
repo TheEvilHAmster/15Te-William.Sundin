@@ -1,1 +1,71 @@
-package looooop;public class Loop {public static void main(String[] args) {for(int i =2; i <= Integer.MAX_VALUE ; i++){System.out.println(i);}}}
+import java.net.URL;
+import java.util.ArrayList;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Loop {
+	
+	/**
+	 * A simple Java sound file example (i.e., Java code to play a sound file).
+	 * AudioStream and AudioPlayer code comes from a javaworld.com example.
+	 * @author alvin alexander, devdaily.com.
+	 */
+//**	public class JavaAudioPlaySoundExample
+	
+	  public  static void idiot() 
+	  throws Exception
+	 {
+	    //open the sound file as a Java input stream
+	    String gongFile = "/Users/linus.olofsson1/Desktop/15Te-Linus.Olofsson/Strukturer/You are an idiot!.mp3";
+	    InputStream in = new FileInputStream(gongFile);
+
+	    // create an audiostream from the inputstream
+	    AudioStream audioStream = new AudioStream(in);
+
+	    // play the audio clip with the audioplayer class
+	    AudioPlayer.player.start(audioStream);
+	  }
+	
+	
+	public static void main(String[] args) throws InterruptedException {
+		Thread thread = new Thread(() -> {
+			for(int i = 0; i < Integer.MAX_VALUE; i++) {
+				System.out.println(i);
+			}
+		});
+		
+		thread.start();
+		
+		ArrayList<JFrame> al = new ArrayList<>();
+		
+		while(true){ 
+			JFrame frame = new JFrame();
+			frame.setLocationByPlatform(true);
+			frame.setSize(500, 500);
+			frame.setVisible(true);
+			showLoader(frame);
+			al.add(frame);
+		}
+	}
+	
+	public static void showLoader(JFrame frameLoader) {
+        URL url = Loop.class.getResource("\C:\BS\crazyfrogbrothers.gif");
+        Icon icon = new ImageIcon(url);
+        JLabel label = new JLabel(icon);
+        frameLoader.setUndecorated(true);
+        frameLoader.getContentPane().add(label);
+        frameLoader.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameLoader.pack();
+        frameLoader.setLocationRelativeTo(null);
+        frameLoader.setVisible(true);
+	// ta bort/ lägg till för modifering och test Thread.sleep(1000);
+	
+	}	
+	
+	
+	
+}
+// Bara för jag kan

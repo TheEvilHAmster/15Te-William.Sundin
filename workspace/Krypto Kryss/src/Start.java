@@ -162,7 +162,7 @@ public class Start {
 		krypto[6][12] = 5;
 		krypto[6][13] = 4;
 		krypto[6][14] = 5;
-		//rad 7
+		//rad 8
 		krypto[7][0] = 5;
 		krypto[7][1] = 4;
 		krypto[7][2] = 5;
@@ -289,12 +289,13 @@ public class Start {
 		krypto[14][11] = 4;
 		krypto[14][12] = 5;
 		krypto[14][13] = 4;
-		krypto[14][14] = 5;
+		krypto[14][14] = 31;
 		//rad 15
 		
-		char key [] = new char [30];
+		char key [] = new char [40];
 		key[5] = 'A';
 		key[4] = 'P';
+		key[31] = 'R'; 
 		showGrid(krypto, key);
 	}
 }

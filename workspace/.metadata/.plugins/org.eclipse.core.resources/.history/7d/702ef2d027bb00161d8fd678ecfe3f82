@@ -1,0 +1,44 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandomNr {
+
+	public static void main(String[] args) {
+		
+		Random rand = new Random();	
+		int numG = rand.nextInt(100);
+		int numT = 0;
+		Scanner input = new Scanner(System.in);
+		int G;
+		boolean win = false;
+		
+		while (win == false){
+	
+		System.out.println("Guess a nr between 1 and 100:");
+		G = input.nextInt();
+		numT++;
+		
+		if (G == numG){
+			win = true;
+		}
+		else if (G + 30 >= numG || G - 30 <= numG) {
+			System.out.println("It's ice cold!!");
+		}
+		else if (G + 20 >= numG || G - 20 <= numG) {
+			System.out.println("It's a little worm");
+		}
+		
+		else if (G + 10 > numG || G - 10 < numG) {
+			System.out.println("It's hot!");
+		}
+		
+		else if (G + 5 >= numG || G - 5 <= numG) {
+			System.out.println("You are Burning it is so HOT!!");
+		}
+		
+	}
+	System.out.println("You are right!");
+	System.out.println("The nr was " + numG);
+	System.out.println("It took you " + numT + " tries");
+  }		
+}

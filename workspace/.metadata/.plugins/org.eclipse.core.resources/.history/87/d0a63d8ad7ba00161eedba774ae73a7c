@@ -1,0 +1,301 @@
+/* 
+1.Mata in krupto
+
+2.Skriv ut krypto
+Håll reda på vilka siffror som har ett tecken i nyckeln
+Det ska vara någon form av layot, ramar eller grafik eller liknande liknande
+
+3.Mata in  nyckel
+Hur ska jag hålla koll på vad jag matar in, så att rätt bockastv hamnar på rätt plats.
+"14 = T" pasa efter = och allt före är ett tal och ett tecken
+"T = 14! samma fast tvärtom. 
+*/
+
+public class Start {
+
+	static void println(String stringtoprint){
+		System.out.println(stringtoprint);
+	}
+
+	static void showGrid(int[][] krypto, char[] key){
+		int width = krypto[0].length;
+		
+		StringBuilder sb = new StringBuilder("+");
+		for(int i = 0; i < width; i++) {
+			sb.append("--+");
+		}
+		String breakingLine = sb.toString();
+		
+		System.out.println(breakingLine);
+		for(int[] row : krypto) {
+			System.out.print("|");
+			for(int x : row) {
+				char c = key[x];
+				String s = Character.toString(c);
+				if(c == 0) {
+					s = Integer.toString(x);
+				}
+				
+				String output = String.format("%zs", s);
+				System.out.print(output);
+				System.out.print("|");
+			}
+			System.out.println();
+			System.out.println(breakingLine);
+		}
+	}
+		
+
+	
+	public static void main(String[] args) {
+		int sizeX=15, sizeY=15; //Kryptots storlek
+		int[][] krypto = new int[sizeY][sizeX];
+		//rad1
+		krypto[0][0] = 5;
+		krypto[0][1] = 4;
+		krypto[0][2] = 5;
+		krypto[0][3] = 4;
+		krypto[0][4] = 4;
+		krypto[0][5] = 5;
+		krypto[0][6] = 4;
+		krypto[0][7] = 5;
+		krypto[0][8] = 4;
+		krypto[0][9] = 5;
+		krypto[0][10] = 5;
+		krypto[0][11] = 4;
+		krypto[0][12] = 5;
+		krypto[0][13] = 4;
+		krypto[0][14] = 5;
+		// rad 2
+		krypto[1][0] = 5;
+		krypto[1][1] = 4;
+		krypto[1][2] = 5;
+		krypto[1][3] = 4;
+		krypto[1][4] = 4;
+		krypto[1][5] = 5;
+		krypto[1][6] = 4;
+		krypto[1][7] = 5;
+		krypto[1][8] = 4;
+		krypto[1][9] = 5;
+		krypto[1][10] = 5;
+		krypto[1][11] = 4;
+		krypto[1][12] = 5;
+		krypto[1][13] = 4;
+		krypto[1][14] = 5;
+		//rad 3
+		krypto[2][0] = 5;
+		krypto[2][1] = 4;
+		krypto[2][2] = 5;
+		krypto[2][3] = 4;
+		krypto[2][4] = 4;
+		krypto[2][5] = 5;
+		krypto[2][6] = 4;
+		krypto[2][7] = 5;
+		krypto[2][8] = 4;
+		krypto[2][9] = 5;
+		krypto[2][10] = 5;
+		krypto[2][11] = 4;
+		krypto[2][12] = 5;
+		krypto[2][13] = 4;
+		krypto[2][14] = 5;
+		// rad 4
+		krypto[3][0] = 5;
+		krypto[3][1] = 4;
+		krypto[3][2] = 5;
+		krypto[3][3] = 4;
+		krypto[3][4] = 4;
+		krypto[3][5] = 5;
+		krypto[3][6] = 4;
+		krypto[3][7] = 5;
+		krypto[3][8] = 4;
+		krypto[3][9] = 5;
+		krypto[3][10] = 5;
+		krypto[3][11] = 4;
+		krypto[3][12] = 5;
+		krypto[3][13] = 4;
+		krypto[3][14] = 5;
+		// rad 5
+		krypto[4][0] = 5;
+		krypto[4][1] = 4;
+		krypto[4][2] = 5;
+		krypto[4][3] = 4;
+		krypto[4][4] = 4;
+		krypto[4][5] = 5;
+		krypto[4][6] = 4;
+		krypto[4][7] = 5;
+		krypto[4][8] = 4;
+		krypto[4][9] = 5;
+		krypto[4][10] = 5;
+		krypto[4][11] = 4;
+		krypto[4][12] = 5;
+		krypto[4][13] = 4;
+		krypto[4][14] = 5;
+		//rad 6
+		krypto[5][0] = 5;
+		krypto[5][1] = 4;
+		krypto[5][2] = 5;
+		krypto[5][3] = 4;
+		krypto[5][4] = 4;
+		krypto[5][5] = 5;
+		krypto[5][6] = 4;
+		krypto[5][7] = 5;
+		krypto[5][8] = 4;
+		krypto[5][9] = 5;
+		krypto[5][10] = 5;
+		krypto[5][11] = 4;
+		krypto[5][12] = 5;
+		krypto[5][13] = 4;
+		krypto[5][14] = 5;
+		//rad 7
+		krypto[6][0] = 5;
+		krypto[6][1] = 4;
+		krypto[6][2] = 5;
+		krypto[6][3] = 4;
+		krypto[6][4] = 4;
+		krypto[6][5] = 5;
+		krypto[6][6] = 4;
+		krypto[6][7] = 5;
+		krypto[6][8] = 4;
+		krypto[6][9] = 5;
+		krypto[6][10] = 5;
+		krypto[6][11] = 4;
+		krypto[6][12] = 5;
+		krypto[6][13] = 4;
+		krypto[6][14] = 5;
+		//rad 8
+		krypto[7][0] = 5;
+		krypto[7][1] = 4;
+		krypto[7][2] = 5;
+		krypto[7][3] = 4;
+		krypto[7][4] = 4;
+		krypto[7][5] = 5;
+		krypto[7][6] = 4;
+		krypto[7][7] = 5;
+		krypto[7][8] = 4;
+		krypto[7][9] = 5;
+		krypto[7][10] = 5;
+		krypto[7][11] = 4;
+		krypto[7][12] = 5;
+		krypto[7][13] = 4;
+		krypto[7][14] = 5;
+		//rad 8
+		krypto[8][0] = 5;
+		krypto[8][1] = 4;
+		krypto[8][2] = 5;
+		krypto[8][3] = 4;
+		krypto[8][4] = 4;
+		krypto[8][5] = 5;
+		krypto[8][6] = 4;
+		krypto[8][7] = 5;
+		krypto[8][8] = 4;
+		krypto[8][9] = 5;
+		krypto[8][10] = 5;
+		krypto[8][11] = 4;
+		krypto[8][12] = 5;
+		krypto[8][13] = 4;
+		krypto[8][14] = 5;
+		//rad 9
+		krypto[9][0] = 5;
+		krypto[9][1] = 4;
+		krypto[9][2] = 5;
+		krypto[9][3] = 4;
+		krypto[9][4] = 4;
+		krypto[9][5] = 5;
+		krypto[9][6] = 4;
+		krypto[9][7] = 5;
+		krypto[9][8] = 4;
+		krypto[9][9] = 5;
+		krypto[9][10] = 5;
+		krypto[9][11] = 4;
+		krypto[9][12] = 5;
+		krypto[9][13] = 4;
+		krypto[9][14] = 5;
+		//rad 10
+		krypto[10][0] = 5;
+		krypto[10][1] = 4;
+		krypto[10][2] = 5;
+		krypto[10][3] = 4;
+		krypto[10][4] = 4;
+		krypto[10][5] = 5;
+		krypto[10][6] = 4;
+		krypto[10][7] = 5;
+		krypto[10][8] = 4;
+		krypto[10][9] = 5;
+		krypto[10][10] = 5;
+		krypto[10][11] = 4;
+		krypto[10][12] = 5;
+		krypto[10][13] = 4;
+		krypto[10][14] = 5;
+		//rad 11
+		krypto[11][0] = 5;
+		krypto[11][1] = 4;
+		krypto[11][2] = 5;
+		krypto[11][3] = 4;
+		krypto[11][4] = 4;
+		krypto[11][5] = 5;
+		krypto[11][6] = 4;
+		krypto[11][7] = 5;
+		krypto[11][8] = 4;
+		krypto[11][9] = 5;
+		krypto[11][10] = 5;
+		krypto[11][11] = 4;
+		krypto[11][12] = 5;
+		krypto[11][13] = 4;
+		krypto[11][14] = 5;
+		//rad 12
+		krypto[12][0] = 5;
+		krypto[12][1] = 4;
+		krypto[12][2] = 5;
+		krypto[12][3] = 4;
+		krypto[12][4] = 4;
+		krypto[12][5] = 5;
+		krypto[12][6] = 4;
+		krypto[12][7] = 5;
+		krypto[12][8] = 4;
+		krypto[12][9] = 5;
+		krypto[12][10] = 5;
+		krypto[12][11] = 4;
+		krypto[12][12] = 5;
+		krypto[12][13] = 4;
+		krypto[12][14] = 5;
+		// rad 13
+		krypto[13][0] = 5;
+		krypto[13][1] = 4;
+		krypto[13][2] = 5;
+		krypto[13][3] = 4;
+		krypto[13][4] = 4;
+		krypto[13][5] = 5;
+		krypto[13][6] = 4;
+		krypto[13][7] = 5;
+		krypto[13][8] = 4;
+		krypto[13][9] = 5;
+		krypto[13][10] = 5;
+		krypto[13][11] = 4;
+		krypto[13][12] = 5;
+		krypto[13][13] = 4;
+		krypto[13][14] = 5;
+		// rad 14
+		krypto[14][0] = 5;
+		krypto[14][1] = 4;
+		krypto[14][2] = 5;
+		krypto[14][3] = 4;
+		krypto[14][4] = 4;
+		krypto[14][5] = 5;
+		krypto[14][6] = 4;
+		krypto[14][7] = 5;
+		krypto[14][8] = 4;
+		krypto[14][9] = 5;
+		krypto[14][10] = 5;
+		krypto[14][11] = 4;
+		krypto[14][12] = 5;
+		krypto[14][13] = 4;
+		krypto[14][14] = 26;
+		//rad 15
+		
+		char key [] = new char [30];
+		key[5] = 'A';
+		key[4] = 'P';
+		key[26] = 'R'; 
+		showGrid(krypto, key);
+	}
+}

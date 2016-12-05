@@ -1,0 +1,23 @@
+import java.util.Random;
+import java.util.Scanner;
+import javax.swing.JFrame;
+
+public class RandomNr extends JFrame{
+
+	
+	public static void main(String[] args){
+		new RandomNr().setVisible(true);
+	
+
+	private RandomNr(){
+		super("ljanflanflanflnafe");
+		setSize(1024, 600);
+		setResizable(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocation(200,150);
+	}}
+		
+
+
+		
+	
